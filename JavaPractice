@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+class Scratch {
+    public static void main (String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Welcome to Grade Point Average System! \n");
+        int a = 4;
+        int b = 3;
+        int c = 2;
+        int d = 1;
+        int f = 0;
+        int total = 0;
+        int grade;
+        double average;
+        int counter = 0;
+        System.out.println("Enter class averages: \n");
+
+        while (counter < 7){
+
+            grade = input.nextInt();
+            if (grade >= 90){
+                grade = a;
+            }
+            else if (grade >= 80 ){
+                grade = b;
+            }
+            else if (grade >= 70 ){
+                grade = c;
+            }
+            else if (grade >= 65 ){
+                grade = d;
+            }
+            else if (grade <= 64 ){
+                grade = f;
+            }
+            else {
+                System.out.println("Try again!");
+            }
+
+
+            total = total + grade;
+            counter++;
+        }
+
+        average = total/7;
+        System.out.print("Your GPA is "+ average);
+    }
+}
